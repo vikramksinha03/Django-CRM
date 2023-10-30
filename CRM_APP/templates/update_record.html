@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center mt-5">
+  <form action="" method="POST">
+    {% csrf_token %}
+    <label class="form-label">{{ form.as_p }}</label>
+    <button type="submit" class="btn btn-success d-block mx-auto">Update</button>
+  </form>
+</div>
+
+
+{% endblock %}
