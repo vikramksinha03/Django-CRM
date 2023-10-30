@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<P class="text-center fs-1 text-lg-center mt-5">Login</P>
+<div class="container-lg justify-content-center align-content-center mt-3 w-25">
+  <form method="POST" class="form-control bg-success form-control-lg d-flex justify-content-center flex-column">
+    {% csrf_token %}
+    <label class="mt-1" for="user">Username</label>
+    <input class="mt-1 mb-1 form-control form-control-lg" type="text" id='user' placeholder="Please enter username" name='username'/>
+
+    <label for="pass">password</label>
+    <input class="mt-1 mb-3 form-control form-control-lg" type="password" id='pass', placeholder="Enter your password" name='password'/>
+    
+
+    <button type="submit" class='btn btn-primary mb-3'>Login</button>
+  </form>
+</div>
+
+{% endblock %}
